@@ -1,0 +1,12 @@
+flask
+flask-cors
+tensorflow
+pillow
+numpy
+opencv-python
+gunicorn
+fastapi
+uvicorn
+tensorflow
+numpy
+pillow

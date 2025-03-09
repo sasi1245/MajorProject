@@ -1,0 +1,24 @@
+
+
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - isl-to-text
+      - text-to-isl
+
+  isl-to-text:
+    image: your-dockerhub-username/isl-to-text:latest
+    restart: always
+    ports:
+      - "5001:5000"
+
+  text-to-isl:
+    image: your-dockerhub-username/text-to-isl:latest
+    restart: always
+    ports:
+      - "5002:5000"
